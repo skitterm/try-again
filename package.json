@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "standalone-chromatic": "npx chromatic --project-token=chpt_70eff47c5846045",
+    "e2e-chromatic": "npx chromatic --playwright --project-token=chpt_18ec522513d57d4",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -17,6 +18,7 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@chromatic-com/playwright": "^0.12.2",
     "@chromatic-com/storybook": "^3.2.6",
     "@eslint/js": "^9.25.0",
     "@playwright/test": "^1.52.0",
