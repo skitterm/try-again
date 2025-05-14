@@ -1,13 +1,6 @@
-# React + Vite
+To reproduce the issue:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# try-again
+1. Run `npm install`
+1. Observe that Storybook (standalone) is still on `8.6.12`, whereas Storybook (via `@chromatic-com/playwright`)'s storybook is on `9.0.0-rc.0`
+1. Attempt to upgrade Storybook (standalone)'s to 9.x (`npx storybook@next upgrade`)
+1. Observe the upgrade indicates it's upgrading from `8.6.12` to `8.6.12` (the command fails later due to incompatible peer dependencies due to `@chromatic-com/playwright` being a canary version, but that's a red herring)
